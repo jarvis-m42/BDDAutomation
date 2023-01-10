@@ -21,7 +21,7 @@ public class CarneraHomepageStepDef {
     public void openChromeBrowserAndEnterURL() throws Throwable{
         Properties properties=obj.getProperty();
         driver=new ChromeDriver();
-        driver.manage().window().fullscreen();
+        driver.manage().window().maximize();
         driver.get(properties.getProperty("browser.baseURL"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }

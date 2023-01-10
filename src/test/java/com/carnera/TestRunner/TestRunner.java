@@ -10,10 +10,10 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 @CucumberOptions(
-        features = "./features",
-        glue = {"com.carnera.StepDefs.CarneraHomepageStepDef"},
+        features = "features/CarneraHomepage.feature",
+        glue = {"com.carnera.StepDefs"},
         tags = "@UATTesting",plugin = {"pretty",
-        "html:target/site/cucumber-pretty",
+        "html:target/site/cucumber-pretty.html",
         "json:target/cucumber.json"},
         monochrome = true)
 public class TestRunner {
